@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../public/css/style.css" type="text/css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<title>CloudReader</title>
+	</head>
+	<body>
+		<script>
+			var theme = true;
+			
+			function changeTheme() {
+				if(theme) {
+					$('body').addClass('night');
+					$('.content').addClass('night');
+					theme = false;
+				}
+				else {
+					$('body').removeClass('night');
+					$('.content').removeClass('night');
+					theme = true;
+				}
+				
+			}
+			
+			$('document').ready(function(){
+				$('.nd').click(function(){
+					changeTheme();
+				});
+				$('.fullscreen').click(function(){
+					document.documentElement.requestFullScreen();
+				});
+			});
+			
+			function fullscreen(element) {
+			  if(element.requestFullScreen) {
+				element.requestFullScreen();
+			  } else if(element.mozRequestFullScreen) {
+				element.mozRequestFullScreen();
+			  } else if(element.webkitRequestFullScreen) {
+				element.webkitRequestFullScreen();
+			  }
+			}
+		</script>
+		
+		<header class="header-min">
+			<img src="../public/img/logo-min1.png" class="logo">
+		</header>
+		<aside>
+			<ul>
+				<li><img src="../public/img/design.png"></li>
+				<li class="nd"><img src="../public/img/nd.png"></li>
+				<li class="fullscreen" onclick="fullscreen(document.documentElement);return false;"><img src="../public/img/full.png"></li>
+			</ul>
+		</aside>
+		<!--<div class="signDiv">
+			<div class="login">
+				<a href="errors/404.html">Login</a>
+			</div>
+			<div class="SignUp">
+				<a href="signup.html">SignUp</a>
+			</div>
+		</div>-->
+		<div class="content">		
+			Больше всего на свете я ненавижу обман и люблю честность и потому сразу честно признаюсь, что я вас (совсем немножко!) обманул: на самом деле это не НИКАКАЯ ГЛАВА, а НИКАКАЯ НЕ ГЛАВА – это просто-напросто… Думаете, так я вам и сказал? Нет, подождите. Вот дочитаете до конца, тогда узнаете! А не дочитаете – ну что ж, дело ваше. Только тогда – почти наверняка! – не сумеете правильно прочитать и всю книжку. Да, да!
+
+Дело в том, что хотя перед вами – сказка, но сказка эта очень, очень не простая.
+
+Начнем с начала, как советует Червонный Король (вам предстоит с ним скоро встретиться). И даже немножко раньше: с названия.
+
+«Приключения Алисы в Стране Чудес»…
+
+Будь моя воля, я бы ни за что не назвал так эту книжку. Такое название, по-моему, только сбивает с толку. В самом деле – разве по названию догадаешься, что речь пойдет о маленькой (хотя и очень умной!) девочке? Что приключения будут совсем не такие, как обычно: не будет ни шпионов, ни индейцев, ни пиратов, ни сражений, ни землетрясений, ни кораблекрушений, ни даже охоты на крупную дичь.
+
+Да и «Страна Чудес» – тоже не совсем те слова, какие хотелось бы написать в заглавии этой сказки!
+
+Нет, будь моя воля, я назвал бы книжку, например, так: «Аленка в Вообразилии». Или «Аля в Удивляндии». Или «Алька в Чепухании». Ну уж, на худой конец: «Алиска в Расчудесии». Но стоило мне заикнуться об этом своем желании, как все начинали на меня страшно кричать, чтобы я не смел. И я не посмел!
+
+Все горе в том, что книжка эта была написана в Англии сто лет тому назад и за это время успела так прославиться, что и у нас все – хотя бы понаслышке – знают про Алису и привыкли к скучноватому названию «Приключения Алисы в Стране Чудес». Это называется литературной традицией, и тут, как говорится, ничего не попишешь. Хотя название «Алиска в Расчудесии» гораздо больше похоже на настоящее, английское название этой сказки; но если бы я ее так назвал, люди подумали бы, что это совершенно другая книжка, а не та, знаменитая…
+		</div>
+		<div class="statusBar">			
+			<div class="bookTitle">
+				Алиса в Стране Чудес
+			</div>
+			<div class="bookAuthor">
+				Льюис Кэрролл
+			</div>
+			<div class="pages">
+				page 47 of 597
+			</div>
+		</div>
+	</body>
+</html>
