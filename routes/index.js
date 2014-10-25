@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+var HttpError = require('../error').HttpError;
 
-/* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
-});
-
-module.exports = router;
+module.exports = function (app) {
+	app.get('/', require('./frontpage').get);
+	app.get('/error', require('./error').get);
+	app.get('*', function (req, res, next) {
+		next(new HttpError(404, 'Page not found!'));
+	})
+};
