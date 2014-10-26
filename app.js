@@ -21,7 +21,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use('/public', express.static(path.join(__dirname, 'public')));
-console.log(app.get('/public'));
 
 require('./routes')(app);
 app.use(errorHandler);
