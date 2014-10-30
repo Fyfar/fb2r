@@ -42,14 +42,14 @@
 			
 			header {
 				width: 100%;
-				
+				z-index: 2;
 				
 				position: fixed;
 			}
 			
 			header .logo {
 				height: 50px;
-				margin-left: 50px;
+				margin-left: 30px;
 			}
 			
 			header .logo {
@@ -63,12 +63,12 @@
 			}
 			
 			.header-min .logo {
-				height: 25px;
-				opacity: 0.7;
+				height: 30px;
+				opacity: 1;
 			}
 			
 			.header-min .logo:hover {
-				opacity: 1;
+				opacity: 0.7;
 			}
 			
 												/*		SignUp 		*/
@@ -92,18 +92,18 @@
 				box-shadow: 0px 0px 5px 1px #ddd;
 			}
 			
-			#registrationForm .label, input {
+			form .label, input {
 				display: block;
 			}
 			
-			#registrationForm .label {
+			form .label {
 				color: #777;
 				font-family: Tahoma;
 				font-size: 11pt;
 				line-height: 20pt;
 			}
 			
-			#registrationForm input {
+			form input {
 				width: 100%;
 				height: 45px;
 				border: solid #ddd 1px;
@@ -113,6 +113,60 @@
 				font-family: Tahoma;
 				font-size: 18pt;
 				color: #555;
+			}
+			
+			form textarea {
+				width: 100%;
+				height: 80px;
+				border: solid #ddd 1px;
+				background: #fbfbfb;
+				margin-bottom: 15px;
+				padding-left: 10px;
+				font-family: Tahoma;
+				font-size: 14pt;
+				color: #555;
+				resize: none;
+			}
+			
+			form .buttonsRight {
+				padding-top: 20px;
+				width: 320px;
+				float: right;
+				height: 45px;
+			}
+			
+			form .btnAdd {
+				width: 150px;
+				float: left;
+				background: #0074a2;
+				border: none;
+				color: #fff;
+				line-height: 45px;
+				font-size: 12pt;
+				text-align: center;
+				padding: 0;
+			}
+			
+			form .btnAdd:hover {
+				cursor: pointer;
+				background: #509fbe;
+			}
+			
+			form .btnCancel {
+				width: 150px;
+				float: right;
+				background: #ff7f7f;
+				border: none;
+				color: #fff;
+				line-height: 45px;
+				font-size: 12pt;
+				text-align: center;
+				padding: 0;
+			}
+			
+			form .btnCancel:hover {
+				cursor: pointer;
+				background: #ffa4a4;
 			}
 			
 			#registrationForm .submitBtn {
@@ -132,14 +186,15 @@
 
 												/*		Index 			*/
 			aside {
-width: 0;
-background: red;
+				visibility: hidden;
+				background: #0074a2;
+				z-index: 1;
+				width: 200px;
 				float: left;
 				height: 100%;
 				position: fixed;
-				margin-top: 45px;
-				
-				padding-top: 30px;
+				text-align: left;
+				padding-top: 75px;
 			}
 			
 			aside ul {
@@ -147,19 +202,55 @@ background: red;
 			}
 			
 			aside ul li {
-				margin-bottom: 20px;				
-				text-align: center;
+				height: 60px;
+				padding-left: 30px;
 			}
 			
-			aside img {
-				height: 25px;
-				opacity: 0.5;
+			aside ul li img {
+				height: 30px;
+				float: left;
+				margin-top: 15px;
 			}
-			aside img:hover {
-				height: 25px;
-				opacity: 1;
+			aside ul li p {
+				line-height: 60px;
+				color: #fff;
+				font-family: Tahoma;
+				font-size: 11pt;
+				padding-left: 60px;
+			}
+			aside ul li:hover {
 				cursor: pointer;
+				background: #4ea9cd;
 			}
+			.formBookmark {
+				display: none;
+			}
+			.addBookmark {
+				display: block;
+				position: fixed;
+								width: 100%;
+				height: 100%;
+
+				background: rgba(0, 0, 0, 0.9);
+				z-index: 3;
+			}
+			.newFormLabel {
+				width: 500px;
+				margin: auto;
+				font-family: Tahoma;				
+				font-size: 30pt;
+				color: #0074a2;
+				text-align: center;
+				margin-top: 100px;
+			}
+			.bookmarkDiv {
+				padding: 30px;
+				width: 500px;
+				margin: auto;
+				background: #fff;
+				margin-top: 10px;
+				padding-bottom: 100px;
+			}	
 			
 			.signDiv {
 				position: fixed;
