@@ -7,9 +7,24 @@
 		<title>CloudReader</title>
 	</head>
 	<body>
-	<!--<div style="width: 100%; height: 100%; position: absolute; background: rgba(0, 0, 0, 0.9);"></div>-->
+	<div class="formBookmark">
+		<div class="newFormLabel">Add Bookmark</div>
+		<div class="bookmarkDiv">
+			<form>
+				<span class="label">Name</span>
+				<input type="text" name="nameBookmark">				
+				<span class="label">Description</span>
+				<textarea></textarea>	
+				<div class="buttonsRight">
+					<input type="submit" class="btnAdd" value="Add">
+					<div class="btnCancel" onclick="$('.formBookmark').removeClass('addBookmark');">Cancel</div>
+				</div>
+			</form>
+		</div>
+	</div>
 		<script>
 			var theme = true;
+			var asideVisi = false;
 			
 			function changeTheme() {
 				if(theme) {
@@ -32,7 +47,18 @@
 				$('.fullscreen').click(function(){
 					document.documentElement.requestFullScreen();
 				});
-				$('.logo').animate({"width": "+=180px"}, "slow");
+				$('.logo').click(function() {
+					if(asideVisi === false) {
+						$('aside').css("visibility","visible");
+						asideVisi = true;
+						$('.logo').attr("src","../public/img/logo-min1_white.png");
+					}
+					else {
+						$('aside').css("visibility","hidden");
+						asideVisi = false;
+						$('.logo').attr("src","../public/img/logo-min1.png");
+					}
+				});
 			});
 			
 			function fullscreen(element) {
@@ -44,16 +70,23 @@
 				element.webkitRequestFullScreen();
 			  }
 			}
+			function addBookmark() {
+				$(".formBookmark").addClass("addBookmark");
+			}
 		</script>
 		
 		<header class="header-min">
-			<img src="../public/img/logo-min1.png" class="logo">
+			<img class="logo" src="../public/img/logo-min1.png" >
 		</header>
 		<aside>
 			<ul>
-				<!--<li><img src="../public/img/design.png"></li>-->
-				<li class="nd"><img src="../public/img/nd.png"></li>
-				<li class="fullscreen" onclick="fullscreen(document.documentElement);return false;"><img src="../public/img/full.png"></li>
+				<li class="design"><img src="../public/img/design_white.png"><p>Settings</p></li>
+				<li class="nd"><img src="../public/img/nd_white.png"><p>Theme</p></li>
+				<li class="fullscreen" onclick="fullscreen(document.documentElement);return false;"><img src="../public/img/full_white.png"><p>Fullscreen</p></li>
+				<li class="info"><img src="../public/img/info_white.png"><p>Book info</p></li>
+				<li class="plus" onclick="addBookmark();"><img src="../public/img/plus_white.png"><p>Add bookmark</p></li>
+				<li class="statistics"><img src="../public/img/statistics_white.png"><p>Statistics</p></li>
+				<li class="search"><img src="../public/img/search_white.png"><p>Search</p></li>
 			</ul>
 		</aside>
 		<div class="signDiv" style="display: none;">
