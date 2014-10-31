@@ -6,7 +6,13 @@
 				font:inherit;
 				vertical-align:baseline;
 				outline:none;
+				text-decoration: none;
 			}
+			
+			.table{display:table;}
+			.tr{display:table-row;}
+			.td{display:table-cell;vertical-align:middle;}
+			.top{vertical-align:top;}
 			
 			::-webkit-scrollbar-track{-webkit-box-shadow: background-color: transparent;}
 			::-webkit-scrollbar{width: 8px;height: 10px;background-color: transparent;}
@@ -36,8 +42,8 @@
 			}
 			
 			body {
-				background: #f1f1f1;
-				min-width: 1024px;
+				background: #f9f9f9;
+				min-width: 960px;
 			}
 			
 			header {
@@ -64,11 +70,11 @@
 			
 			.header-min .logo {
 				height: 30px;
-				opacity: 1;
+				opacity: 0.8;
 			}
 			
 			.header-min .logo:hover {
-				opacity: 0.7;
+				opacity: 1;
 			}
 			
 												/*		SignUp 		*/
@@ -76,7 +82,7 @@
 			.signUpLabel {
 				width: 280px;
 				margin: auto;
-				padding-top: 120px;
+				padding-top: 80px;
 				font-size: 40px;
 				font-family: Tahoma;
 				color: #0074a2;
@@ -140,6 +146,7 @@
 				float: left;
 				background: #0074a2;
 				border: none;
+				font-family: Tahoma;
 				color: #fff;
 				line-height: 45px;
 				font-size: 12pt;
@@ -147,7 +154,25 @@
 				padding: 0;
 			}
 			
+			form .btnCenter {
+				font-family: Tahoma;
+				width: 150px;
+				background: #0074a2;
+				border: none;
+				color: #fff;
+				line-height: 45px;
+				font-size: 12pt;
+				text-align: center;
+				padding: 0;
+				margin: auto;
+			}
+			
 			form .btnAdd:hover {
+				cursor: pointer;
+				background: #509fbe;
+			}
+			
+			form .btnCenter:hover {
 				cursor: pointer;
 				background: #509fbe;
 			}
@@ -156,6 +181,7 @@
 				width: 150px;
 				float: right;
 				background: #ff7f7f;
+				font-family: Tahoma;
 				border: none;
 				color: #fff;
 				line-height: 45px;
@@ -195,6 +221,10 @@
 				position: fixed;
 				text-align: left;
 				padding-top: 75px;
+				transition: fade-out 1s;
+			}
+			.asideVisible {
+				visibility: visible;
 			}
 			
 			aside ul {
@@ -224,6 +254,18 @@
 			}
 			.formBookmark {
 				display: none;
+			}
+			.formBookInfo {
+				display: none;
+			}
+			
+			.showBookInfo {
+				display: block;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.9);
+				z-index: 3;
 			}
 			.addBookmark {
 				display: block;
@@ -279,7 +321,7 @@
 			}
 			
 			.content {
-				width: 800px; 
+				width: 780px; 
 				margin: auto;
 				height: auto;
 				padding: 50px 0;
@@ -318,4 +360,123 @@
 			.night {
 				background: #1e1e1e;
 				color: #bbb;
+			}
+			
+			
+			
+			
+			.shelf {
+				font-family: Tahoma;
+				color: #555;
+			}
+			
+			.pageTitle {
+				font-size: 25pt;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			
+			.shelf .book {
+				width: 180px;
+				height: 329px;
+				overflow: hidden;	
+				float: left;
+				margin-left: 20px;
+				margin-bottom: 30px;
+			}
+			
+			.shelf .book:nth-child(4n+3) {
+				margin-left: 0;
+			}
+			
+			.shelf .book .bookImg {
+				display: table-cell;
+				height: 284px;
+				max-height: 284px;
+				vertical-align: middle;
+				overflow: hidden;
+				-webkit-filter: brightness(75%);
+			}
+			.shelf .book .bookImg:hover {
+				cursor: pointer;
+				-webkit-filter: brightness(100%);
+			}
+			
+			.shelf .book img {
+				max-height: 284px;
+				width: 180px;
+			}
+			
+			.shelf .btnInfo {
+				width: 100%;
+				height: 45px;
+				background: #0074a2;
+				font-family: Tahoma;
+				color: #fff;
+				line-height: 45px;
+				font-size: 12pt;
+				text-align: center;
+			}
+			
+			.shelf .btnInfo:hover {
+				cursor: pointer;
+				background: #509fbe;
+			}
+			
+			.active {
+				background: #4ea9cd;
+			}
+			
+			.backToReading {
+				-webkit-animation: myfirst 1.5s; /* Chrome, Safari, Opera */
+				animation: myfirst 1.5s;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+			.backToReading:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+
+			/* Chrome, Safari, Opera */
+			@-webkit-keyframes myfirst {
+				0% { color: red;}
+				50% {color: #ffcd8c;}
+				100% {color: red;}
+
+			/* Standard syntax */
+				0% { color: red;}
+				50% {color: #ffcd8c;}
+				100% {color: red;}
+			}
+			
+			@media (max-width:1200px){
+				.content {
+					width: 460px;
+				}
+				
+				.shelf .book {
+					margin-left: 100px;
+				}
+				
+				.shelf .book:nth-child(3n+2) {
+					margin-left: 0;
+				}
+			
+			@media (max-width:960px){
+				.content {
+					width: 400px;
+				}
+				
+				.shelf .book {
+					margin-left: 40px;
+				}
+			}
+			
+			 @media only screen and (max-device-width:480px){
+			   /* styles for mobile browsers smaller than 480px; (iPhone) */
+			}
+			
+			@media only screen and (device-width:768px){
+			   /* default iPad screens */
 			}

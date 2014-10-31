@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../public/stylesheets/style.css" type="text/css">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="../public/js/js.js"></script>
 		<title>CloudReader</title>
 	</head>
 	<body>
@@ -22,68 +23,27 @@
 			</form>
 		</div>
 	</div>
-		<script>
-			var theme = true;
-			var asideVisi = false;
-			
-			function changeTheme() {
-				if(theme) {
-					$('body').addClass('night');
-					$('.content').addClass('night');
-					theme = false;
-				}
-				else {
-					$('body').removeClass('night');
-					$('.content').removeClass('night');
-					theme = true;
-				}
-				
-			}
-			
-			$('document').ready(function(){
-				$('.nd').click(function(){
-					changeTheme();
-				});
-				$('.fullscreen').click(function(){
-					document.documentElement.requestFullScreen();
-				});
-				$('.logo').click(function() {
-					if(asideVisi === false) {
-						$('aside').css("visibility","visible");
-						asideVisi = true;
-						$('.logo').attr("src","../public/img/logo-min1_white.png");
-					}
-					else {
-						$('aside').css("visibility","hidden");
-						asideVisi = false;
-						$('.logo').attr("src","../public/img/logo-min1.png");
-					}
-				});
-			});
-			
-			function fullscreen(element) {
-			  if(element.requestFullScreen) {
-				element.requestFullScreen();
-			  } else if(element.mozRequestFullScreen) {
-				element.mozRequestFullScreen();
-			  } else if(element.webkitRequestFullScreen) {
-				element.webkitRequestFullScreen();
-			  }
-			}
-			function addBookmark() {
-				$(".formBookmark").addClass("addBookmark");
-			}
-		</script>
+	<div class="formBookInfo">
+		<div class="newFormLabel">Book info</div>
+		<div class="bookmarkDiv">
+			<form>
+				<div style="font-family: Tahoma; font-size: 20pt; color: #333;">Ой какая интересная книга, ууу ааааа, жесть вообще, с роду не читал такой интересной книги</div>
+					<div class="btnCenter" onclick="$('.formBookInfo').removeClass('showBookInfo');">OK</div>
+			</form>
+		</div>
+	</div>
 		
 		<header class="header-min">
-			<img class="logo" src="../public/img/logo-min1.png" >
+			<img class="logo" src="../public/img/arrow_reverse.png">
+			
 		</header>
 		<aside>
 			<ul>
+				<a href="shelf.html"><li class="shelf"><img src="../public/img/logo-min1_white.png"><p>Shelf</p></li></a>
 				<li class="design"><img src="../public/img/design_white.png"><p>Settings</p></li>
 				<li class="nd"><img src="../public/img/nd_white.png"><p>Theme</p></li>
 				<li class="fullscreen" onclick="fullscreen(document.documentElement);return false;"><img src="../public/img/full_white.png"><p>Fullscreen</p></li>
-				<li class="info"><img src="../public/img/info_white.png"><p>Book info</p></li>
+				<li class="info" onclick="showInfoBook();"><img src="../public/img/info_white.png"><p>Book info</p></li>
 				<li class="plus" onclick="addBookmark();"><img src="../public/img/plus_white.png"><p>Add bookmark</p></li>
 				<li class="statistics"><img src="../public/img/statistics_white.png"><p>Statistics</p></li>
 				<li class="search"><img src="../public/img/search_white.png"><p>Search</p></li>
@@ -114,7 +74,7 @@
 
 Все горе в том, что книжка эта была написана в Англии сто лет тому назад и за это время успела так прославиться, что и у нас все – хотя бы понаслышке – знают про Алису и привыкли к скучноватому названию «Приключения Алисы в Стране Чудес». Это называется литературной традицией, и тут, как говорится, ничего не попишешь. Хотя название «Алиска в Расчудесии» гораздо больше похоже на настоящее, английское название этой сказки; но если бы я ее так назвал, люди подумали бы, что это совершенно другая книжка, а не та, знаменитая…
 		</div>
-		<div class="statusBar" style="display: none;">			
+		<div class="statusBar" style="display:block;">			
 			<div class="bookTitle">
 				Алиса в Стране Чудес
 			</div>

@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../public/stylesheets/style.css" type="text/css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="../public/js/js.js"></script>
+		<title>CloudReader</title>
+	</head>
+	<body>
+	<div class="formBookmark">
+		<div class="newFormLabel">Add Bookmark</div>
+		<div class="bookmarkDiv">
+			<form>
+				<span class="label">Name</span>
+				<input type="text" name="nameBookmark">				
+				<span class="label">Description</span>
+				<textarea></textarea>	
+				<div class="buttonsRight">
+					<input type="submit" class="btnAdd" value="Add">
+					<div class="btnCancel" onclick="$('.formBookmark').removeClass('addBookmark');">Cancel</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="formBookInfo">
+		<div class="newFormLabel">Book info</div>
+		<div class="bookmarkDiv">
+			<form>
+				<div style="font-family: Tahoma; font-size: 20pt; color: #333;">Ой какая интересная книга, ууу ааааа, жесть вообще, с роду не читал такой интересной книги</div>
+					<div class="btnCenter" onclick="$('.formBookInfo').removeClass('showBookInfo');">OK</div>
+			</form>
+		</div>
+	</div>
+		
+		
+		<header class="header-min">
+			<img class="logo" src="../public/img/arrow_reverse.png">
+			
+		</header>
+		<aside>
+			<ul>
+				<a href="shelf.html"><li class="shelf active"><img src="../public/img/logo-min1_white.png"><p>Shelf</p></li></a>
+				<li class="design"><img src="../public/img/design_white.png"><p>Settings</p></li>
+				<li class="nd"><img src="../public/img/nd_white.png"><p>Theme</p></li>
+				<li class="fullscreen" onclick="fullscreen(document.documentElement);return false;"><img src="../public/img/full_white.png"><p>Fullscreen</p></li>
+				<li class="info" onclick="showInfoBook();"><img src="../public/img/info_white.png"><p>Book info</p></li>
+				<li class="plus" onclick="addBookmark();"><img src="../public/img/plus_white.png"><p>Add bookmark</p></li>
+				<li class="statistics"><img src="../public/img/statistics_white.png"><p>Statistics</p></li>
+				<li class="search"><img src="../public/img/search_white.png"><p>Search</p></li>
+			</ul>
+		</aside>
+		<div class="content shelf">
+			<a href="index.html">
+				<div class="backToReading">
+					Back to reading 
+				</div>
+			</a>
+			<div class="pageTitle">
+				My shelf
+			</div>
+			
+				
+				
+						<div class="book">
+							<a href="index.html">
+								<div class="bookImg">
+									<img src="../public/img/bookRye.jpg">
+								</div>
+							</a>
+							<div class="btnInfo" onclick="showInfoBook();">
+								info
+							</div>
+						</div>
+					
+
+						<div class="book">
+							<a href="index.html">
+								<div class="bookImg">
+									<img src="../public/img/bookJon.jpg">
+								</div>
+							</a>
+							<div class="btnInfo" onclick="showInfoBook();">
+								info
+							</div>
+						</div>
+
+
+						<div class="book">
+							<a href="index.html">
+								<div class="bookImg">
+									<img src="../public/img/bookLord.jpg">
+								</div>
+							</a>
+							<div class="btnInfo" onclick="showInfoBook();">
+								info
+							</div>
+						</div>
+
+
+						<div class="book">
+							<a href="index.html">
+								<div class="bookImg">
+									<img src="../public/img/bookHiba.jpg">
+								</div>
+							</a>
+							<div class="btnInfo" onclick="showInfoBook();">
+								info
+							</div>
+						</div>
+
+				
+				
+					
+						<div class="book">
+							<a href="index.html">
+								<div class="bookImg">
+									<img src="../public/img/bookAlice.jpg">
+								</div>
+							</a>
+							<div class="btnInfo" onclick="showInfoBook();">
+								info
+							</div>
+						</div>
+					
+				
+			
+		</div>
+	</body>
+<html>
