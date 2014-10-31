@@ -346,15 +346,15 @@
 			}
 
 			.statusBar div {
-				display: inline-block;
+				width: 500px;
 				height: 25px;
 				line-height: 25px;
-				margin-right: 50px;
+				margin: auto;
+				text-align: center;
 			}
-
-			.statusBar div:first-child {
-				margin-left: 50px;
-				padding-left: 0;
+			
+			.statusBar div span {
+				padding: 0 30px;
 			}
 			
 			.night {
@@ -429,7 +429,7 @@
 			
 			.backToReading {
 				-webkit-animation: myfirst 1.5s; /* Chrome, Safari, Opera */
-				animation: myfirst 1.5s;
+				animation: myfirst 1s;
 				-webkit-animation-iteration-count: infinite;
 			}
 			
