@@ -1,4 +1,36 @@
 {
   "port": 3000,
-  "env": "dev"
+  "env": "dev",
+  "dropbox": {
+    "clientID": "ygam033j049nurm",
+    "clientSecret": "8jbe7gnyi4y9imt",
+    "callbackURL": "http://127.0.0.1:3000/auth/dropbox/callback"
+  },
+  "vkontakte": {
+    "clientID": "ygam033j049nurm",
+    "clientSecret": "8jbe7gnyi4y9imt"
+  },
+  "facebook": {
+    "clientID": "ygam033j049nurm",
+    "clientSecret": "8jbe7gnyi4y9imt"
+  },
+  "googlePlus": {
+    "clientID": "ygam033j049nurm",
+    "clientSecret": "8jbe7gnyi4y9imt"
+  },
+  "mongoose": {
+    "uri": {
+      "local": "localhost:27017/fb2r",
+      "mongohq": ""
+    },
+    "options":{
+      "auto_reconnect":true,
+      "server":{
+        "socketOptions":{
+          "keepAlive":1
+        }
+      }
+    }
+  }
+
 }
