@@ -2,13 +2,17 @@ var mongoose = require('../lib/mongoose'),
   Schema = mongoose.Schema;
 
 var schemaUser = new Schema({
-  profider: String,
   id: Number,
   displayName: String,
-  emails: [
+  emails: [{
     value: String
-  ],
-  accessToken: String
+  }],
+  provider: [{
+    name: String,
+    accessToken: String,
+    requestToken: String
+  }],
+  userToken: String
 });
 
 exports.User = mongoose.model('User', schemaUser);

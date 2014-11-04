@@ -23,10 +23,10 @@
       "local": "localhost:27017/fb2r",
       "mongohq": ""
     },
-    "options":{
+    "options": {
       "auto_reconnect":true,
-      "server":{
-        "socketOptions":{
+      "server": {
+        "socketOptions": {
           "keepAlive":1
         }
       }
