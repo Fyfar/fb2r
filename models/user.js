@@ -10,7 +10,7 @@ var schemaUser = new Schema({
   provider: [{
     name: String,
     accessToken: String,
-    requestToken: String
+    refreshToken: String
   }],
   userToken: String
 });
