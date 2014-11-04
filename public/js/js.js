@@ -3,11 +3,11 @@
 			function getTheme() {
 				if(localStorage.getItem('theme') === 'false') {
 					$('body').addClass('night');
-					$('.content, .pageTitle, .backToReading').addClass('night');		
+					$('.content, .pageTitle, .backToReading, .statusBar, .task').addClass('night');		
 				}
 				else {
 					$('body').removeClass('night');
-					$('.content, .pageTitle, .backToReading').removeClass('night');
+					$('.content, .pageTitle, .backToReading, .statusBar, .task').removeClass('night');
 				}
 			}
 			
@@ -27,14 +27,14 @@
 			function changeTheme() {
 				if(localStorage.getItem('theme') === 'false') {
 					$('body').removeClass('night');
-					$('.content, .pageTitle, .backToReading').removeClass('night');
+					$('.content, .pageTitle, .backToReading, .statusBar, .task').removeClass('night');
 					localStorage.setItem('theme', 'true'); 
 					
 				}
 				else {
 				
-				$('body').addClass('night');
-					$('.content, .pageTitle, .backToReading').addClass('night');					
+					$('body').addClass('night');
+					$('.content, .pageTitle, .backToReading, .statusBar, .task').addClass('night');
 					localStorage.setItem('theme', 'false'); 
 					
 				}
