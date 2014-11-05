@@ -31,8 +31,7 @@
 					localStorage.setItem('theme', 'true'); 
 					
 				}
-				else {
-				
+				else {				
 					$('body').addClass('night');
 					$('.content, .pageTitle, .backToReading, .statusBar, .task').addClass('night');
 					localStorage.setItem('theme', 'false'); 

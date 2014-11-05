@@ -98,8 +98,25 @@
 				padding: 25px;
 				background: #fff;
 				margin: auto;
-				margin-top: 20px;
-				box-shadow: 0px 0px 5px 1px #ddd;
+				margin-top: 0px;
+				border: solid #eee 1px;
+				border-top: none;
+			}
+
+			.tabs a {
+				color: #0074a2;;
+			}
+
+			.SocialNetwork {
+				width: 35px;
+				height: 35px;
+				display: inline-block;
+				margin-top: 25px;
+			}
+
+			.SocialNetwork img {
+				width: 35px;
+				height: 35px;
 			}
 			
 			form .label, input {
