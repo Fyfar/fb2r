@@ -16,9 +16,12 @@ module.exports = function (app) {
   .get(require('./dropbox').get)
   .post(require('./dropbox').post)
   .put(require('./dropbox').put)
-  .delete(require('./dropbox').delete)
+  .delete(require('./dropbox').delete);
   //app.get('/dropbox/:user_token?path=:book', require('./dropbox').getBook);
   // End dropbox api block
+
+  //API
+  app.get('/api/:user_token', require('./api').get);
 
   app.get('*', function (req, res, next) {
     next(new HttpError(404, 'Page not found!'));

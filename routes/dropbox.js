@@ -3,6 +3,7 @@ var User = require('../models/user').User;
 
 exports.get = function(req, res, next) {
   User.findOne({id: req.params.user_token}, function(err, user) {
+    console.log(err);
     if (!err) {
       if (user) {
         var path = req.query.path;
@@ -16,13 +17,13 @@ exports.get = function(req, res, next) {
         https.get(url + '?access_token=' + token, function(response) {
           response.on('data', function(chunk) {
             res.write(chunk);
-          })
+          });
           response.on('end', function() {
             res.end();
           })
         });
       } else {
-        next(new Error(500, 'User not found'));
+        next(new Error(404, 'User not found'));
       }
     } else {
       next(500);
@@ -33,26 +34,6 @@ exports.getAllUsers = function(req, res, next) {
   User.find({}, function(err, users) {
     if (!err) {
       res.json(users);
-    } else {
-      next(500);
-    }
-  });
-};
-exports.getBook = function(req, res, next) {
-  User.findOne({id: req.params.user_token}, function(err, user) {
-    if (!err) {
-      if (user) {
-        var path = req.query.path;
-        var token = user.provider[0].accessToken;
-        https.get('https://api.dropbox.com/1/files/auto//' +
-          path + '?access_token=' + token, function(response) {
-          response.on('data', function(data) {
-            res.json(JSON.parse(data));
-          })
-        });
-      } else {
-        next(new Error(500, 'User not found'));
-      }
     } else {
       next(500);
     }

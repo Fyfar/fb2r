@@ -1,5 +1,7 @@
 var mongoose = require('../lib/mongoose'),
   Schema = mongoose.Schema;
+var md5 = require('MD5');
+
 
 var schemaUser = new Schema({
   id: Number,
@@ -14,5 +16,9 @@ var schemaUser = new Schema({
   }],
   userToken: String
 });
+
+schemaUser.methods.encryptToken = function(emails, id) {
+  return md5(emails + id);
+};
 
 exports.User = mongoose.model('User', schemaUser);
