@@ -78,6 +78,10 @@
 			}
 			
 												/*		SignUp 		*/
+			
+			.signUpLogo {
+				padding-left: 50px;
+			}
 
 			.signUpLabel {
 				width: 280px;
@@ -94,8 +98,25 @@
 				padding: 25px;
 				background: #fff;
 				margin: auto;
-				margin-top: 20px;
-				box-shadow: 0px 0px 5px 1px #ddd;
+				margin-top: 0px;
+				border: solid #eee 1px;
+				border-top: none;
+			}
+
+			.tabs a {
+				color: #0074a2;;
+			}
+
+			.SocialNetwork {
+				width: 35px;
+				height: 35px;
+				display: inline-block;
+				margin-top: 25px;
+			}
+
+			.SocialNetwork img {
+				width: 35px;
+				height: 35px;
 			}
 			
 			form .label, input {
@@ -165,6 +186,8 @@
 				text-align: center;
 				padding: 0;
 				margin: auto;
+				float: right;
+				margin-top: 180px;
 			}
 			
 			form .btnAdd:hover {
@@ -221,7 +244,6 @@
 				position: fixed;
 				text-align: left;
 				padding-top: 75px;
-				transition: fade-out 1s;
 			}
 			.asideVisible {
 				visibility: visible;
@@ -232,17 +254,17 @@
 			}
 			
 			aside ul li {
-				height: 60px;
+				height: 50px;
 				padding-left: 30px;
 			}
 			
 			aside ul li img {
-				height: 30px;
+				height: 25px;
 				float: left;
-				margin-top: 15px;
+				margin-top: 12px;
 			}
 			aside ul li p {
-				line-height: 60px;
+				line-height: 50px;
 				color: #fff;
 				font-family: Tahoma;
 				font-size: 11pt;
@@ -255,8 +277,38 @@
 			.formBookmark {
 				display: none;
 			}
+			
+			.bookInfoDiv {
+				height: 280px;
+			}
+
+			.bookInfoDiv ul li {
+				margin-bottom: 5px;
+				font-size: 13pt;
+			}
+
 			.formBookInfo {
 				display: none;
+			}
+
+			.bookInfoLabel {
+				font-family: Tahoma;
+				color: #333;
+			}
+
+			.bookInfoTitle {
+				font-family: Tahoma;
+				color: #777;
+			}
+
+
+
+			.formBookmark .pageNum {
+				float: left;
+				margin-top: 30px;
+				color: #555;
+				font-family: Tahoma;
+				font-size: 13pt;
 			}
 			
 			.showBookInfo {
@@ -267,6 +319,28 @@
 				background: rgba(0, 0, 0, 0.9);
 				z-index: 3;
 			}
+
+			.showBookInfo ul {
+				list-style: none;
+			}
+
+			.bookInfoList {
+				float: left;
+				
+			}
+
+			.bookInfoImg {
+				width: 180px;
+				height: 284px;
+				max-height: 284px;
+				float: right;
+				overflow: hidden;
+			}
+
+			.bookInfoImg img {
+				width: 100%;
+			}
+
 			.addBookmark {
 				display: block;
 				position: fixed;
@@ -299,16 +373,16 @@
 				top: 30px;
 				right: 30px;
 				width: 80px;
-				background: #0074a2;
+				color: #0074a2;
 				text-align: center;
 				font-family: Tahoma;
 				padding: 20px;
-				border-radius: 10px;
+				
 			}
 			
 			.signDiv div a {
 				text-decoration: none;
-				color: #fff;
+				color: #0074a2;
 			}
 			
 			.signDiv div:hover a {
@@ -339,8 +413,8 @@
 				margin-top: 100px;
 				width: 100%;
 				height: 25px;
-				background: #111;
-				color: #fff;
+				background: #f1f1f1;
+				color: #333;
 				font-family: Tahoma;
 				font-size: 8pt;
 			}
@@ -449,7 +523,108 @@
 				50% {color: #ffcd8c;}
 				100% {color: red;}
 			}
+
+
+
+			/*   Settings     */
+			.settings {
+				font-family: Tahoma;
+				color: #555;
+			}
+
+			.settings form {
+				float: left;
+			}
+
+			.settings select {
+				width: 250px;
+				height: 40px;
+				color: #999;
+				font-size: 13pt;
+				padding-left: 10px;
+				background: transparent;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+			}
+
+			.settings .select {
+				border: 1px solid #ddd;
+			    overflow: hidden; 
+			   	width: 250px;
+			   	height: 40px;
+			   	background: #fbfbfb url(../img/select.png) no-repeat;
+			   	background-position: right;
+			   	margin-bottom: 10px;
+			}
+
+			.settings input {
+				width: 250px;
+				color: #999;
+				font-size: 13pt;
+				background: #fbfbfb;
+			}
+
+			.settings .apply {
+				width: 120px;
+				height: 45px;
+				background: #0074a2;
+				color: #fff;
+				text-align: center;
+				padding-left: 0;
+				font-size: 12pt;
+				margin-top: 30px;
+				border: none;
+			}
+
+			.settings .apply:hover {
+				background: #509fbe;
+				cursor: pointer;
+			}
+
+			.rightSide {
+				float: right;
+			}
+
+			.settings .rightSide .example {
+				width: 320px;
+				height: 320px;
+				background: #f5f5f5;
+				overflow: hidden;
+				padding: 10px;
+				font-family: Courier New;
+			}
 			
+			.settings .rightSide .exampleTitle {
+				color: #777;
+				line-height: 30pt;
+			}
+
+			/*    Statistics     */
+			.statistics {
+				font-family: Tahoma;
+				color: #555;
+			}
+
+			.statistics .task {
+				font-size: 14pt;
+				margin-bottom: 10px;
+			}
+
+			.statistics .subtask {
+				color: #999;
+				font-size: 12pt;
+			}
+
+			.statistics img {
+				width: 500px;
+			}
+
+			.statistics .block {
+				border-bottom: solid #ddd 1px;
+				padding: 20px 0;
+
+			}
+
 			@media (max-width:1200px){
 				.content {
 					width: 460px;
@@ -461,6 +636,10 @@
 				
 				.shelf .book:nth-child(3n+2) {
 					margin-left: 0;
+				}
+
+				.statistics .block img {
+					width: 400px;
 				}
 			
 			@media (max-width:960px){
@@ -475,6 +654,41 @@
 			
 			 @media only screen and (max-device-width:480px){
 			   /* styles for mobile browsers smaller than 480px; (iPhone) */
+			   aside {
+			   		width: 420px;
+			   }
+
+			   aside ul {
+			   		margin-top: 30px;
+			   }
+
+			   aside ul li {
+					height: 150px;
+			   }
+
+			   aside ul li img {
+			   		height: 80px;
+			   		margin-top: 35px;
+			   }
+
+			   aside ul li p {
+					padding-left: 150px;
+					font-size: 25pt;
+					line-height: 150px;
+			   }
+
+			   .header-min .logo {
+					height: 80px;
+					opacity: 0.8;
+				}
+
+				.content {
+					width: 85%;
+					padding-top: 120px;
+					font-size: 18pt;
+					line-height: 45pt;
+				}
+
 			}
 			
 			@media only screen and (device-width:768px){

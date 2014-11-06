@@ -4,8 +4,9 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../public/stylesheets/style.css" type="text/css">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<link rel="import" href="aside.html">
 		<script src="../public/js/js.js"></script>
-		<title>CloudReader</title>
+		<title>CloudReader | Shelf</title>
 	</head>
 	<body>
 	<div class="formBookmark">
@@ -25,10 +26,21 @@
 	</div>
 	<div class="formBookInfo">
 		<div class="newFormLabel">Book info</div>
-		<div class="bookmarkDiv">
+		<div class="bookmarkDiv bookInfoDiv">
 			<form>
-				<div style="font-family: Tahoma; font-size: 20pt; color: #333;">Ой какая интересная книга, ууу ааааа, жесть вообще, с роду не читал такой интересной книги</div>
-					<div class="btnCenter" onclick="$('.formBookInfo').removeClass('showBookInfo');">OK</div>
+				<div class="bookInfoList">
+					<ul>
+						<li><span class="bookInfoLabel">Title: </span><span class="bookInfoTitle">Alice in Wonderland</span></li>
+						<li><span class="bookInfoLabel">Genre: </span><span class="bookInfoTitle">Novel</span></li>
+						<li><span class="bookInfoLabel">Author: </span><span class="bookInfoTitle">Jerome</span></li>
+						<li><span class="bookInfoLabel">Pages: </span><span class="bookInfoTitle">213</span></li>
+						<li><span class="bookInfoLabel">Issue: </span><span class="bookInfoTitle">16 jun 1951</span></li>
+					</ul>
+				</div>
+				<div class="bookInfoImg">
+					<img src="../public/img/bookJon.jpg">
+				</div>
+				<div class="btnCenter" onclick="$('.formBookInfo').removeClass('showBookInfo');">OK</div>
 			</form>
 		</div>
 	</div>
@@ -41,13 +53,13 @@
 		<aside>
 			<ul>
 				<a href="shelf.html"><li class="shelf active"><img src="../public/img/logo-min1_white.png"><p>Shelf</p></li></a>
-				<li class="design"><img src="../public/img/design_white.png"><p>Settings</p></li>
+				<a href="settings.html"><li class="design"><img src="../public/img/design_white.png"><p>Settings</p></li></a>
 				<li class="nd"><img src="../public/img/nd_white.png"><p>Theme</p></li>
 				<li class="fullscreen" onclick="fullscreen(document.documentElement);return false;"><img src="../public/img/full_white.png"><p>Fullscreen</p></li>
-				<li class="info" onclick="showInfoBook();"><img src="../public/img/info_white.png"><p>Book info</p></li>
-				<li class="plus" onclick="addBookmark();"><img src="../public/img/plus_white.png"><p>Add bookmark</p></li>
-				<li class="statistics"><img src="../public/img/statistics_white.png"><p>Statistics</p></li>
-				<li class="search"><img src="../public/img/search_white.png"><p>Search</p></li>
+				<!--<li class="info" onclick="showInfoBook();"><img src="../public/img/info_white.png"><p>Book info</p></li>-->
+				<!--<li class="plus" onclick="addBookmark();"><img src="../public/img/plus_white.png"><p>Add bookmark</p></li>-->
+				<a href="statistics.html"><li class="statisticsMenu"><img src="../public/img/statistics_white.png"><p>Statistics</p></li></a>
+				<!--<li class="search"><img src="../public/img/search_white.png"><p>Search</p></li>-->
 			</ul>
 		</aside>
 		<div class="content shelf">
