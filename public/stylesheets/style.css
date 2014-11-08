@@ -22,8 +22,8 @@
 			
 			
 			*::selection {
-				background:  #CAFCE2; 
-				color: #111;
+				background:  transparent; 
+				color: #f00;
 			}
 			
 			*::-moz-selection {
@@ -407,6 +407,19 @@
 				overflow: hidden;
 			}
 
+			.bookField {
+				width: 780px; 
+				margin: auto;
+				height: auto;
+				padding: 50px 0;
+				font-family: Courier;
+				font-size: 15pt;
+				line-height: 22pt;
+				color: #333;
+				text-align: justify;
+				overflow: hidden;
+			}
+
 			.statusBar {
 				position: fixed;
 				bottom: 0;
@@ -417,6 +430,7 @@
 				color: #333;
 				font-family: Tahoma;
 				font-size: 8pt;
+				min-width: 960px;
 			}
 
 			.statusBar div {
@@ -564,6 +578,13 @@
 				background: #fbfbfb;
 			}
 
+			.settings .applyok {
+				width: 120px;
+				height: 45px;
+				background: url(../img/galka.png) no-repeat;
+				margin-top: 30px;
+			}
+
 			.settings .apply {
 				width: 120px;
 				height: 45px;
@@ -571,14 +592,18 @@
 				color: #fff;
 				text-align: center;
 				padding-left: 0;
-				font-size: 12pt;
-				margin-top: 30px;
+				font-size: 12pt;				
 				border: none;
 			}
 
 			.settings .apply:hover {
 				background: #509fbe;
 				cursor: pointer;
+			}
+
+			.settings .apply:active {
+				background: transparent;
+				color: transparent;
 			}
 
 			.rightSide {
@@ -592,6 +617,7 @@
 				overflow: hidden;
 				padding: 10px;
 				font-family: Courier New;
+				font-size: 15pt;
 			}
 			
 			.settings .rightSide .exampleTitle {

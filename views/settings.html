@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="../public/stylesheets/style.css" type="text/css">
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="../public/js/js.js"></script>
+		<script src="../public/js/design.js"></script>
 		<title>CloudReader | Settings</title>
 	</head>
 	<body>
@@ -43,25 +44,28 @@
 				</div>
 				<div class="label">Font</div>
 				<div class="select">
-					<select name="" id="">
-						<option value="courierNew">Courier New</option>
-						<option value="tahoma">Tahoma</option>
-						<option value="timesNewRoman">Times New Roman</option>
+					<select name="" id="font-familySelect">
+						<option value="Courier New" selected="selected">Courier New</option>
+						<option value="Tahoma">Tahoma</option>
+						<option value="Times New Roman">Times New Roman</option>
+						<option value="Calibri">Calibri</option>
 					</select>
 				</div>
 				<div class="label">Size</div>
 				<div class="select">
-					<select name="" id="">
-						<option value="pt11">11pt</option>
-						<option value="pt12">12pt</option>
-						<option value="pt15">15pt</option>
+					<select name="" id="font-sizeSelect">
+						<option value="11pt">11pt</option>
+						<option value="12pt">12pt</option>
+						<option value="15pt" selected="selected">15pt</option>
+						<option value="17pt">17pt</option>
+						<option value="20pt">20pt</option>
 					</select>
 				</div>
 				<div class="label">Color</div>
-				<input type="text" value="#333333">
+				<input type="text" value="#333333" id="colorSelect">
 				<div class="label">Background</div>
-				<input type="text" value="#f5f5f5">
-				<input type="submit" value="Apply" class="apply">
+				<input type="text" value="#f5f5f5" id="backgroundSelect">
+				<div class="applyok"><input type="button" value="Apply" class="apply"></div>
 			</form>
 			<div class="rightSide">
 				<div class="exampleTitle">Example</div>

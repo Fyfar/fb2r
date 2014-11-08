@@ -8,7 +8,17 @@
 				else {
 					$('body').removeClass('night');
 					$('.content, .pageTitle, .backToReading, .statusBar, .task').removeClass('night');
+					$('.bookField').css("font-size", localStorage.getItem('size'));
+					$('.bookField').css("font-family", localStorage.getItem('fontFamily'));
+					$('.bookField').css("color", localStorage.getItem('color'));
+					$('.readBook').css("background", localStorage.getItem('background'));
+					$('.readBook').css('color', localStorage.getItem('color'));
 				}
+				//for example
+				$('.example').css("font-size", localStorage.getItem('size'));
+				$('.example').css("font-family", localStorage.getItem('fontFamily'));
+				$('.example').css("color", localStorage.getItem('color'));
+				$('.example').css("background", localStorage.getItem('background'));
 			}
 			
 			function getSidebar() {
@@ -40,7 +50,8 @@
 				
 			}
 			
-			$('document').ready(function(){			
+			$('document').ready(function(){		
+
 			
 				getTheme();
 				getSidebar();
@@ -87,5 +98,3 @@
 					
 				}
 			}
-			
-			
