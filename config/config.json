@@ -7,8 +7,9 @@
     "callbackURL": "http://127.0.0.1:3000/auth/dropbox/callback"
   },
   "vkontakte": {
-    "clientID": "ygam033j049nurm",
-    "clientSecret": "8jbe7gnyi4y9imt"
+    "clientID": "4630120",
+    "clientSecret": "RXXfZmofx124jbWKPfPm",
+    "callbackURL": "http://127.0.0.1:3000/auth/vk/callback"
   },
   "facebook": {
     "clientID": "ygam033j049nurm",

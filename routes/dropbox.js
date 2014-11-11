@@ -1,8 +1,10 @@
+/*jshint node:true */
+'use strict';
 var https = require('https');
 var User = require('../models/user').User;
 
 exports.get = function(req, res, next) {
-  User.findOne({id: req.params.user_token}, function(err, user) {
+  User.findOne({id: req.params.userToken}, function(err, user) {
     if (!err) {
       if (user) {
         var path = req.query.path;
@@ -16,10 +18,10 @@ exports.get = function(req, res, next) {
         https.get(url + '?access_token=' + token, function(response) {
           response.on('data', function(chunk) {
             res.write(chunk);
-          })
+          });
           response.on('end', function() {
             res.end();
-          })
+          });
         });
       } else {
         next(new Error(500, 'User not found'));
@@ -39,7 +41,7 @@ exports.getAllUsers = function(req, res, next) {
   });
 };
 exports.getBook = function(req, res, next) {
-  User.findOne({id: req.params.user_token}, function(err, user) {
+  User.findOne({id: req.params.userToken}, function(err, user) {
     if (!err) {
       if (user) {
         var path = req.query.path;
@@ -48,7 +50,7 @@ exports.getBook = function(req, res, next) {
           path + '?access_token=' + token, function(response) {
           response.on('data', function(data) {
             res.json(JSON.parse(data));
-          })
+          });
         });
       } else {
         next(new Error(500, 'User not found'));
@@ -59,14 +61,14 @@ exports.getBook = function(req, res, next) {
   });
 };
 exports.post = function(req, res, next) {
-  console.log("This is post request!");
-  res.json("This is post request!");
+  console.log('This is post request!');
+  res.json('This is post request!');
 };
 exports.put = function(req, res, next) {
-  console.log("This is put request!");
-  res.json("This is put request!");
+  console.log('This is put request!');
+  res.json('This is put request!');
 };
 exports.delete = function(req, res, next) {
-  console.log("This is delete request!");
-  res.json("This is delete request!");
+  console.log('This is delete request!');
+  res.json('This is delete request!');
 };
