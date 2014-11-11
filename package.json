@@ -21,6 +21,7 @@
     "passport-google-oauth": "^0.1.5",
     "passport-local": "^1.0.0",
     "passport-vkontakte": "^0.3.0",
-    "static-favicon": "~1.0.0"
+    "static-favicon": "~1.0.0",
+    "MD5": "~1.2.1"
   }
 }

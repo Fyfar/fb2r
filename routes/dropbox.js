@@ -5,6 +5,7 @@ var User = require('../models/user').User;
 
 exports.get = function(req, res, next) {
   User.findOne({id: req.params.userToken}, function(err, user) {
+    console.log(err);
     if (!err) {
       if (user) {
         var path = req.query.path;
@@ -24,7 +25,7 @@ exports.get = function(req, res, next) {
           });
         });
       } else {
-        next(new Error(500, 'User not found'));
+        next(new Error(404, 'User not found'));
       }
     } else {
       next(500);
