@@ -15,7 +15,10 @@
 					$('.readBook').css('color', localStorage.getItem('color'));
 				}
 				//for example
-
+				$('.example').css("font-size", localStorage.getItem('size'));
+				$('.example').css("font-family", localStorage.getItem('fontFamily'));
+				$('.example').css("color", localStorage.getItem('color'));
+				$('.example').css("background", localStorage.getItem('background'));
 			}
 			
 			function getSidebar() {

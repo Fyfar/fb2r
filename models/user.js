@@ -1,3 +1,5 @@
+/*jshint node:true */
+'use strict';
 var mongoose = require('../lib/mongoose'),
   Schema = mongoose.Schema;
 var md5 = require('MD5');
@@ -6,6 +8,11 @@ var md5 = require('MD5');
 var schemaUser = new Schema({
   id: Number,
   displayName: String,
+  username: String,
+  profileUrl: String,
+  photos: [{
+    value: String
+  }],
   emails: [{
     value: String
   }],

@@ -1,6 +1,8 @@
 /**
  * Created by Fyfar on 25.10.2014.
  */
+/*jshint node:true*/
+'use strict';
 var HttpError = require('../error').HttpError,
   config = require('../config'),
   errorHandler = require('errorhandler');
@@ -30,10 +32,10 @@ function ErrorHandler(app) {
         errorHandler()(err, req, res, next);
       } else {
         err = new HttpError(500);
-        sendHttpError(err, res)
+        sendHttpError(err, res);
       }
     }
-  }
+  };
 }
 
 module.exports = ErrorHandler;
