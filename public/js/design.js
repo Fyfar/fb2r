@@ -4,14 +4,18 @@ var fontFamily = localStorage.getItem('fontFamily');
 var color = localStorage.getItem('color');
 var background = localStorage.getItem('background');
 
+
+
 $('document').ready(function(){
 
+
 	$(function() {
-	    $("#font-sizeSelect").val(localStorage.getItem('size'));
-	    $('#font-familySelect').val(localStorage.getItem('fontFamily'));
-	    $('#colorSelect').val(localStorage.getItem('color'));
-	    $('#backgroundSelect').val(localStorage.getItem('background'));
+	    $("#font-sizeSelect").val(size);
+	    $('#font-familySelect').val(fontFamily);
+	    $('#colorSelect').val(color);
+	    $('#backgroundSelect').val(background);
 	});
+
 
 	$("#font-sizeSelect").change(function() {
 		setFontSize();
