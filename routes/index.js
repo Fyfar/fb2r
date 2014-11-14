@@ -12,9 +12,6 @@ module.exports = function (app) {
   app.get('/auth/dropbox', passport.authenticate('dropbox'));
   app.get('/auth/dropbox/callback',
     passport.authenticate('dropbox', {successRedirect: '/'}));
-  app.get('/auth/vk', passport.authenticate('vk'));
-  app.get('/auth/vk/callback',
-    passport.authenticate('vk', {successRedirect: '/'}));
   // End auth block
 
   // Start dropbox api block
@@ -28,7 +25,7 @@ module.exports = function (app) {
   // End dropbox api block
 
   //API
-  app.get('/api/:user_token', require('./api').get);
+  app.get('/api/:userToken', require('./api').get);
 
   app.get('*', function (req, res, next) {
     next(new HttpError(404, 'Page not found!'));
