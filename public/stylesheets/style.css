@@ -478,10 +478,10 @@
 			}
 			
 			.shelf .book .bookImg {
-				display: table-cell;
 				height: 284px;
 				max-height: 284px;
-				vertical-align: middle;
+				min-height: 284px;
+				width: auto;
 				overflow: hidden;
 				-webkit-filter: brightness(75%);
 			}
@@ -491,8 +491,10 @@
 			}
 			
 			.shelf .book img {
+				height: 284px;
 				max-height: 284px;
-				width: 180px;
+				min-height: 284px;
+				width: 100%;
 			}
 			
 			.shelf .btnInfo {
