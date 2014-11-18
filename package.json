@@ -1,10 +1,29 @@
 {
-  "name": "fb2r",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
+  "name": "FB2R",
+  "version": "1.0.0",
+  "description": "OpenShift Sample Application",
+  "keywords": [
+    "OpenShift",
+    "Node.js",
+    "application",
+    "openshift"
+  ],
+  "author": {
+    "name": "Yuriy",
+    "email": "about@fyfar.me",
+    "url": "fyfar.me"
   },
+  "homepage": "http://www.openshift.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openshift/origin-server"
+  },
+
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+
   "dependencies": {
     "body-parser": "~1.0.0",
     "cookie-parser": "~1.0.1",
@@ -23,5 +42,10 @@
     "passport-vkontakte": "^0.3.0",
     "static-favicon": "~1.0.0",
     "MD5": "~1.2.1"
-  }
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "bin/www"
 }

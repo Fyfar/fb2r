@@ -4,7 +4,6 @@ var mongoose = require('../lib/mongoose'),
   Schema = mongoose.Schema;
 var md5 = require('MD5');
 
-
 var schemaUser = new Schema({
   id: Number,
   displayName: String,
