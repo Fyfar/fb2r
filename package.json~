@@ -1,0 +1,51 @@
+{
+  "name": "FB2R",
+  "version": "1.0.0",
+  "description": "FB2 Reader for university",
+  "keywords": [
+    "OpenShift",
+    "Node.js",
+    "application",
+    "openshift"
+  ],
+  "author": {
+    "name": "Yuriy",
+    "email": "about@fyfar.me",
+    "url": "fyfar.me"
+  },
+  "homepage": "https://fb2r-university.rhcloud.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openshift/origin-server"
+  },
+
+  "engines": {
+    "node": ">= 0.8.0",
+    "npm": ">= 1.0.0"
+  },
+
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "ejs": "^1.0.0",
+    "errorhandler": "^1.2.2",
+    "express": "~4.2.0",
+    "mongoose": "^3.8.18",
+    "morgan": "~1.0.0",
+    "nconf": "^0.6.9",
+    "passport": "^0.2.1",
+    "passport-dropbox-oauth2": "^0.1.6",
+    "passport-facebook": "^1.0.3",
+    "passport-google-oauth": "^0.1.5",
+    "passport-local": "^1.0.0",
+    "passport-vkontakte": "^0.3.0",
+    "static-favicon": "~1.0.0",
+    "MD5": "~1.2.1"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "bin/www"
+}
