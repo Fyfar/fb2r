@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="../public/stylesheets/style.css" type="text/css">
+		<link rel="stylesheet" href="../public/stylesheets/style.css" type="text/css">		
+		<script type="text/javascript" src="../lib/xmlParser.js"></script>
 		<script type="text/javascript" src="../public/js/jquery-1.11.1.min.js"></script>
 		<script src="../public/js/js.js"></script>
 		<script src="../public/js/design.js"></script>
@@ -33,7 +34,7 @@
 					<ul>
 						<li><span class="bookInfoLabel">Title: </span><span class="bookInfoTitle">Alice in Wonderland</span></li>
 						<li><span class="bookInfoLabel">Genre: </span><span class="bookInfoTitle">Novel</span></li>
-						<li><span class="bookInfoLabel">Author: </span><span class="bookInfoTitle">Jerome</span></li>
+						<li><span class="bookInfoLabel">Author: </span><span class="bookInfoTitle" id="author"></span></li>
 						<li><span class="bookInfoLabel">Pages: </span><span class="bookInfoTitle">213</span></li>
 						<li><span class="bookInfoLabel">Issue: </span><span class="bookInfoTitle">16 jun 1951</span></li>
 					</ul>
@@ -72,14 +73,9 @@
 			</div>
 		</div>
 		<div class="content">
-		<div class="bookField">
-			Больше всего на свете я ненавижу обман и люблю честность и потому сразу честно признаюсь, что я вас (совсем немножко!) обманул: на самом деле это не НИКАКАЯ ГЛАВА, а НИКАКАЯ НЕ ГЛАВА – это просто-напросто… Думаете, так я вам и сказал? Нет, подождите. Вот дочитаете до конца, тогда узнаете! А не дочитаете – ну что ж, дело ваше. Только тогда – почти наверняка! – не сумеете правильно прочитать и всю книжку. Да, да!
-
-Дело в том, что хотя перед вами – сказка, но сказка эта очень, очень не простая. Нет, подождите. Вот дочитаете до конца
-Больше всего на свете я ненавижу обман и люблю честность и потому сразу честно признаюсь, что я вас (совсем немножко!) обманул: на самом деле это не НИКАКАЯ ГЛАВА, а НИКАКАЯ НЕ ГЛАВА – это просто-напросто… Думаете, так я вам и сказал? Нет, подождите. Вот дочитаете до конца, тогда узнаете! А не дочитаете – ну что ж, дело ваше. Только тогда – почти наверняка! – не сумеете правильно прочитать и всю книжку. Да, да!
-
-Дело в том, что хотя перед вами – сказка, но сказка эта очень, очень не простая. Нет, подождите. Вот дочитаете до конца
-
+			<div id="bookField">
+			
+			</div>
 		</div>
 		<div class="statusBar" style="display:block;">
 			<div>
