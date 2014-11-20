@@ -1,7 +1,7 @@
 {
   "name": "FB2R",
   "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "description": "FB2 Reader for university",
   "keywords": [
     "OpenShift",
     "Node.js",
@@ -13,14 +13,14 @@
     "email": "about@fyfar.me",
     "url": "fyfar.me"
   },
-  "homepage": "http://www.openshift.com/",
+  "homepage": "https://fb2r-university.rhcloud.com/",
   "repository": {
     "type": "git",
     "url": "https://github.com/openshift/origin-server"
   },
 
   "engines": {
-    "node": ">= 0.6.0",
+    "node": ">= 0.8.0",
     "npm": ">= 1.0.0"
   },
 

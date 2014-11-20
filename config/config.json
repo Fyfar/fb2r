@@ -1,10 +1,11 @@
 {
-  "port": 3000,
+  "port": "$OPENSHIFT_NODEJS_PORT",
+  "url": "$OPENSHIFT_NODEJS_IP",
   "env": "dev",
   "dropbox": {
     "clientID": "ygam033j049nurm",
     "clientSecret": "8jbe7gnyi4y9imt",
-    "callbackURL": "http://127.0.0.1:3000/auth/dropbox/callback"
+    "callbackURL": "https://fb2r-university.rhcloud.com/auth/dropbox/callback"
   },
   "vkontakte": {
     "clientID": "4630120",
@@ -22,7 +23,7 @@
   "mongoose": {
     "uri": {
       "local": "localhost:27017/fb2r",
-      "mongohq": ""
+      "openshift": "mongodb://$OPENSHIFT_MONGODB_DB_USERNAME:$OPENSHIFT_MONGODB_DB_PASSWORD@$OPENSHIFT_MONGODB_DB_HOST"
     },
     "options": {
       "auto_reconnect":true,
