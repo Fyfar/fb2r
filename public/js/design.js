@@ -7,6 +7,10 @@ var background = localStorage.getItem('background');
 
 
 $('document').ready(function(){
+	$('.example').css("font-size", localStorage.getItem('size'));
+	$('.example').css("font-family", localStorage.getItem('fontFamily'));
+	$('.example').css("color", localStorage.getItem('color'));
+	$('.example').css("background", localStorage.getItem('background'));
 
 
 	$(function() {
