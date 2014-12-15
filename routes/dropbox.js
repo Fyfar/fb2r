@@ -4,8 +4,7 @@ var https = require('https');
 var User = require('../models/user').User;
 
 exports.get = function(req, res, next) {
-  User.findOne({id: req.params.userToken}, function(err, user) {
-    console.log(err);
+  User.findOne({hashedEmail: req.params.hash}, function(err, user) {
     if (!err) {
       if (user) {
         var path = req.query.path;
@@ -25,7 +24,7 @@ exports.get = function(req, res, next) {
           });
         });
       } else {
-        next(new Error(404, 'User not found'));
+        next(404);
       }
     } else {
       next(500);
@@ -62,8 +61,54 @@ exports.getBook = function(req, res, next) {
   });
 };
 exports.post = function(req, res, next) {
-  console.log('This is post request!');
-  res.json('This is post request!');
+  User.findOne({hashedEmail: req.params.hash}, function(err, user) {
+    if (!err) {
+      if (user) {
+        var flag = false;
+        var bookName = req.param('bookName');
+        if (user.books.length !== 0) {
+          for (var i = 0; i < user.books.length; i++) {
+            if (user.books[i].name === bookName) {
+              flag = true;
+              break;
+            }
+          }
+
+          if (flag) {
+              if (req.param('lastChar') > user.books[i].lastChar) {
+                user.books[i].lastChar = req.param('lastChar');
+                user.books[i].updated = Date.now();
+                user.save();
+                res.json({'status': 'updated'});
+              } else if (req.param('lastChar') == user.books[i].lastChar) {
+                res.json({'status': 'equals'});
+              } else {
+                res.json(JSON.parse(JSON.stringify(user)));
+              }
+            } else {
+              console.log('Add new book ' + bookName);
+              user.books.push({
+                name: bookName,
+                lastChar: req.param('lastChar'),
+                updated: Date.now()
+              });
+              user.save();
+              res.json({'status': 'add new book with flag'});
+            }
+          } else {
+            user.books.push({
+              name: bookName,
+              lastChar: req.param('lastChar'),
+              updated: Date.now()
+            });
+            user.save();
+            res.json({'status': 'add new book'});
+        }
+      } else {
+        next(404);
+      }
+    }
+  });
 };
 exports.put = function(req, res, next) {
   console.log('This is put request!');

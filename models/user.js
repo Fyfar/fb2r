@@ -2,7 +2,6 @@
 'use strict';
 var mongoose = require('../lib/mongoose'),
   Schema = mongoose.Schema;
-var md5 = require('MD5');
 
 var schemaUser = new Schema({
   id: Number,
@@ -12,19 +11,25 @@ var schemaUser = new Schema({
   photos: [{
     value: String
   }],
-  emails: [{
-    value: String
-  }],
+  email: String,
+  hashedEmail: String,
   provider: [{
     name: String,
     accessToken: String,
     refreshToken: String
   }],
-  userToken: String
+  bookmarks: [{
+    bookName:String,
+    lastChar: Number,
+    pageNumber: Number,
+    name: String,
+    text: String
+  }],
+  books: [{
+    name: String,
+    lastChar: Number,
+    updated: Date
+  }]
 });
-
-schemaUser.methods.encryptToken = function(emails, id) {
-  return md5(emails + id);
-};
 
 exports.User = mongoose.model('User', schemaUser);

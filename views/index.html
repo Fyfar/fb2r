@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="../public/stylesheets/style.css" type="text/css">		
+		<link rel="stylesheet" href="../public/stylesheets/style.css" type="text/css">
 		<script type="text/javascript" src="../public/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
 		<script src="../public/js/js.js"></script>
 		<script src="../public/js/aside.js"></script>
 		<script src="../public/js/design.js"></script>
@@ -62,6 +63,9 @@
 				<li class="plus" onclick="addBookmark();"><img src="../public/img/plus_white.png"><p>Add bookmark</p></li>
 				<a href="statistics.html"><li class="statisticsMenu"><img src="../public/img/statistics_white.png"><p>Statistics</p></li></a>
 				<li class="search"><img src="../public/img/search_white.png"><p>Search</p></li>
+				<li><script type="text/javascript">
+						document.write(VK.Share.button(false,{type: "round", text: "Share"}));
+					</script></li>
 			</ul>
 		</aside>
 		<div class="signDiv" style="display: none;">
@@ -74,7 +78,7 @@
 		</div>
 		<div class="content">
 			<div id="bookField">
-				
+
 			</div>
 		</div>
 		<div class="statusBar" style="display:block;">
@@ -82,8 +86,6 @@
 				<span>Алиса в Стране Чудес</span>
 
 				<span>Льюис Кэрролл</span>
-
-				<span>page 47 of 597</span>
 			</div>
 		</div>
 	</body>

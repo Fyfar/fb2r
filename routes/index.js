@@ -12,20 +12,23 @@ module.exports = function (app) {
   app.get('/auth/dropbox', passport.authenticate('dropbox'));
   app.get('/auth/dropbox/callback',
     passport.authenticate('dropbox', {successRedirect: '/'}));
+  app.get('/auth/vk', passport.authenticate('vk'));
+  app.get('/auth/vk/callback',
+    passport.authenticate('vk', {successRedirect: '/'}));
   // End auth block
 
   // Start dropbox api block
   app.get('/dropbox', require('./dropbox').getAllUsers);
-  app.route('/dropbox/:userToken')
+  app.post('/dropbox', require('./dropbox').post);
+  app.route('/dropbox/:hash')
   .get(require('./dropbox').get)
   .post(require('./dropbox').post)
   .put(require('./dropbox').put)
   .delete(require('./dropbox').delete);
   app.get('/dropbox/:userToken?path=:book', require('./dropbox').getBook);
   // End dropbox api block
-
-  //API
-  app.get('/api/:userToken', require('./api').get);
+  app.post('/dropbox/bookmark/:hash', require('./bookmarks').post);
+  app.get('/dropbox/bookmark/:hash', require('./bookmarks').get);
 
   app.get('*', function (req, res, next) {
     next(new HttpError(404, 'Page not found!'));

@@ -8,29 +8,29 @@
 				outline:none;
 				text-decoration: none;
 			}
-			
+
 			.table{display:table;}
 			.tr{display:table-row;}
 			.td{display:table-cell;vertical-align:middle;}
 			.top{vertical-align:top;}
-			
+
 			::-webkit-scrollbar-track{-webkit-box-shadow: background-color: transparent;}
 			::-webkit-scrollbar{width: 8px;height: 10px;background-color: transparent;}
 			::-webkit-scrollbar-thumb{background-color:#bbb; }
 			::-webkit-scrollbar-thumb:hover {background-color:#777;}
 			::-webkit-scrollbar-thumb:active {background-color:rgba(0,116,162, 1);}
-			
-			
+
+
 			*::selection {
-				background:  #f1f1f1; 
+				background:  #f1f1f1;
 				color: #f00;
 			}
-			
+
 			*::-moz-selection {
-				background:  #CAFCE2; 
+				background:  #CAFCE2;
 				color: #111;
 			}
-			
+
 			:-webkit-full-screen aside .fullscreen {/*WebKit, Opera 15+*/
 			  display: none;
 			}
@@ -40,45 +40,45 @@
 			:full-screen aside .fullscreen  {/*Opera 12.15-, Blink, w3c standard*/
 			  display: none;
 			}
-			
+
 			body {
 				background: #f9f9f9;
 				min-width: 960px;
 			}
-			
+
 			header {
 				width: 100%;
 				z-index: 2;
-				
+
 				position: fixed;
 			}
-			
+
 			header .logo {
 				height: 50px;
 				margin-left: 30px;
 			}
-			
+
 			header .logo {
 				cursor: pointer;
 			}
-			
+
 			.header-min {
 				height: 25px;
 				background: transparent;
 				padding-top: 20px;
 			}
-			
+
 			.header-min .logo {
 				height: 30px;
 				opacity: 0.8;
 			}
-			
+
 			.header-min .logo:hover {
 				opacity: 1;
 			}
-			
+
 												/*		SignUp 		*/
-			
+
 			.signUpLogo {
 				padding-left: 50px;
 			}
@@ -92,7 +92,7 @@
 				color: #0074a2;
 				text-align: center;
 			}
-			
+
 			.formDiv {
 				width: 280px;
 				padding: 25px;
@@ -118,18 +118,18 @@
 				width: 35px;
 				height: 35px;
 			}
-			
+
 			form .label, input {
 				display: block;
 			}
-			
+
 			form .label {
 				color: #777;
 				font-family: Tahoma;
 				font-size: 11pt;
 				line-height: 20pt;
 			}
-			
+
 			form input {
 				width: 100%;
 				height: 45px;
@@ -141,7 +141,7 @@
 				font-size: 18pt;
 				color: #555;
 			}
-			
+
 			form textarea {
 				width: 100%;
 				height: 80px;
@@ -154,14 +154,14 @@
 				color: #555;
 				resize: none;
 			}
-			
+
 			form .buttonsRight {
 				padding-top: 20px;
 				width: 320px;
 				float: right;
 				height: 45px;
 			}
-			
+
 			form .btnAdd {
 				width: 150px;
 				float: left;
@@ -174,7 +174,7 @@
 				text-align: center;
 				padding: 0;
 			}
-			
+
 			form .btnCenter {
 				font-family: Tahoma;
 				width: 150px;
@@ -189,17 +189,17 @@
 				float: right;
 				margin-top: 180px;
 			}
-			
+
 			form .btnAdd:hover {
 				cursor: pointer;
 				background: #509fbe;
 			}
-			
+
 			form .btnCenter:hover {
 				cursor: pointer;
 				background: #509fbe;
 			}
-			
+
 			form .btnCancel {
 				width: 150px;
 				float: right;
@@ -212,12 +212,12 @@
 				text-align: center;
 				padding: 0;
 			}
-			
+
 			form .btnCancel:hover {
 				cursor: pointer;
 				background: #ffa4a4;
 			}
-			
+
 			#registrationForm .submitBtn {
 				background: #0074a2;
 				color: #fff;
@@ -226,7 +226,7 @@
 				font-size: 12pt;
 				padding-left: 0;
 			}
-			
+
 			#registrationForm .submitBtn:hover {
 				cursor: pointer;
 				background: #509fbe;
@@ -248,16 +248,16 @@
 			.asideVisible {
 				visibility: visible;
 			}
-			
+
 			aside ul {
 				list-style: none;
 			}
-			
+
 			aside ul li {
 				height: 50px;
 				padding-left: 30px;
 			}
-			
+
 			aside ul li img {
 				height: 25px;
 				float: left;
@@ -277,7 +277,7 @@
 			.formBookmark {
 				display: none;
 			}
-			
+
 			.bookInfoDiv {
 				height: 280px;
 			}
@@ -310,7 +310,7 @@
 				font-family: Tahoma;
 				font-size: 13pt;
 			}
-			
+
 			.showBookInfo {
 				display: block;
 				position: fixed;
@@ -326,7 +326,7 @@
 
 			.bookInfoList {
 				float: left;
-				
+
 			}
 
 			.bookInfoImg {
@@ -353,7 +353,7 @@
 			.newFormLabel {
 				width: 500px;
 				margin: auto;
-				font-family: Tahoma;				
+				font-family: Tahoma;
 				font-size: 30pt;
 				color: #0074a2;
 				text-align: center;
@@ -366,8 +366,8 @@
 				background: #fff;
 				margin-top: 10px;
 				padding-bottom: 100px;
-			}	
-			
+			}
+
 			.signDiv {
 				position: fixed;
 				top: 30px;
@@ -377,25 +377,25 @@
 				text-align: center;
 				font-family: Tahoma;
 				padding: 20px;
-				
+
 			}
-			
+
 			.signDiv div a {
 				text-decoration: none;
 				color: #0074a2;
 			}
-			
+
 			.signDiv div:hover a {
 				text-decoration: underline;
 				cursor: pointer;
 			}
-			
+
 			.signDiv div:first-child {
 				margin-bottom: 10px;
 			}
-			
+
 			.content {
-				width: 780px; 
+				width: 780px;
 				margin: auto;
 				height: auto;
 				padding: 50px 0;
@@ -408,7 +408,7 @@
 			}
 
 			#bookField {
-				width: 780px; 
+				width: 780px;
 				margin: auto;
 				height: auto;
 				padding: 50px 0;
@@ -428,7 +428,7 @@
 			.statusBar {
 				position: fixed;
 				bottom: 0;
-				
+
 				width: 100%;
 				height: 25px;
 				background: #f1f1f1;
@@ -445,43 +445,43 @@
 				margin: auto;
 				text-align: center;
 			}
-			
+
 			.statusBar div span {
 				padding: 0 30px;
 			}
-			
+
 			.night {
 				background: #1e1e1e;
 				color: #bbb;
 			}
-			
-			
-			
-			
+
+
+
+
 			.shelf {
 				font-family: Tahoma;
 				color: #555;
 			}
-			
+
 			.pageTitle {
 				font-size: 25pt;
 				margin-top: 30px;
 				margin-bottom: 30px;
 			}
-			
+
 			.shelf .book {
 				width: 180px;
 				height: 329px;
-				overflow: hidden;	
+				overflow: hidden;
 				float: left;
 				margin-left: 20px;
 				margin-bottom: 30px;
 			}
-			
+
 			.shelf .book:nth-child(4n+3) {
 				margin-left: 0;
 			}
-			
+
 			.shelf .book .bookImg {
 				height: 284px;
 				max-height: 284px;
@@ -494,14 +494,14 @@
 				cursor: pointer;
 				-webkit-filter: brightness(100%);
 			}
-			
+
 			.shelf .book img {
 				height: 284px;
 				max-height: 284px;
 				min-height: 284px;
 				width: 100%;
 			}
-			
+
 			.shelf .btnInfo {
 				width: 100%;
 				height: 45px;
@@ -512,22 +512,22 @@
 				font-size: 12pt;
 				text-align: center;
 			}
-			
+
 			.shelf .btnInfo:hover {
 				cursor: pointer;
 				background: #509fbe;
 			}
-			
+
 			.active {
 				background: #4ea9cd;
 			}
-			
+
 			.backToReading {
 				-webkit-animation: myfirst 1.5s; /* Chrome, Safari, Opera */
 				animation: myfirst 1s;
 				-webkit-animation-iteration-count: infinite;
 			}
-			
+
 			.backToReading:hover {
 				cursor: pointer;
 				text-decoration: underline;
@@ -570,7 +570,7 @@
 
 			.settings .select {
 				border: 1px solid #ddd;
-			    overflow: hidden; 
+			    overflow: hidden;
 			   	width: 250px;
 			   	height: 40px;
 			   	background: #fbfbfb url(../img/select.png) no-repeat;
@@ -599,7 +599,7 @@
 				color: #fff;
 				text-align: center;
 				padding-left: 0;
-				font-size: 12pt;				
+				font-size: 12pt;
 				border: none;
 			}
 
@@ -626,7 +626,7 @@
 				font-family: Courier New;
 				font-size: 15pt;
 			}
-			
+
 			.settings .rightSide .exampleTitle {
 				color: #777;
 				line-height: 30pt;
@@ -662,11 +662,11 @@
 				.content {
 					width: 460px;
 				}
-				
+
 				.shelf .book {
 					margin-left: 100px;
 				}
-				
+
 				.shelf .book:nth-child(3n+2) {
 					margin-left: 0;
 				}
@@ -674,17 +674,17 @@
 				.statistics .block img {
 					width: 400px;
 				}
-			
+
 			@media (max-width:960px){
 				.content {
 					width: 400px;
 				}
-				
+
 				.shelf .book {
 					margin-left: 40px;
 				}
 			}
-			
+
 			 @media only screen and (max-device-width:480px){
 			   /* styles for mobile browsers smaller than 480px; (iPhone) */
 			   aside {
@@ -723,9 +723,12 @@
 				}
 
 			}
-			
+
 			@media only screen and (device-width:768px){
 			   /* default iPad screens */
 			}
 
+			li table {
+				width: 100%;
+			}
 
